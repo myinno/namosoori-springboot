@@ -20,6 +20,8 @@ public class UserServiceLogic implements UserService {
 	//bean이므로 주입되어야 한다 ==> 해당 IF을 구현한 구현 클래수를 찾는다
 //	@Autowired
 //	private	UserStore userStore;
+	
+	
 	//autowired을 지정하지 않은 경우 생성자 방식
 //	public UserServiceLogic(UserStore userStore) {
 //		this.userStore = userStore;

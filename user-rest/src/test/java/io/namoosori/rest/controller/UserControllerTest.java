@@ -12,7 +12,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -20,9 +21,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.namoosori.rest.entity.User;
 
-//@SpringBootTest
-//@AutoConfigureMockMvc
-@WebMvcTest(UserController.class)
+@SpringBootTest
+@AutoConfigureMockMvc
+//@WebMvcTest(UserController.class)
 class UserControllerTest {
 
 	@Autowired
@@ -49,8 +50,8 @@ class UserControllerTest {
 
 	@Test
 	void testRegister() throws Exception{
-		fail("Not yet implemented");
-		User sample = new User();
+//		fail("Not yet implemented");
+		User sample = User.sample();
 		String	content = objectMapper.writeValueAsString(sample);
 		mockMvc.perform(post("/users")
 						.content(content)  //입력을 전달하고
