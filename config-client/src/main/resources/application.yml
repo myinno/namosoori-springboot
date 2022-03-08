@@ -1,0 +1,19 @@
+server:
+  port: 8888
+
+---
+test:
+  str: test-str
+---
+spring:
+  application:
+    name: configtest-dev
+  config:
+    import: optional:configserver:http://localhost:9900
+
+#actuator 관련 설정    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
