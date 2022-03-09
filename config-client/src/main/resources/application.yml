@@ -11,7 +11,8 @@ spring:
   config:
     import: optional:configserver:http://localhost:9900
 
-#actuator 관련 설정    
+--- 
+# actuator 관련 설정   
 management:
   endpoints:
     web:

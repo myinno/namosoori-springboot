@@ -19,10 +19,22 @@ public class ConfigClientController {
 
 	@Value("${namoosori.value}")  //application yaml의 값을 읽어온다
 	private String configStrName;
-
+/*
+ * application.yaml에 정의한 내용
+  spring:
+    application:
+      name: configtest-dev
+    config:
+      import: optional:configserver:http://localhost:9900
+ * configtest-dev의 파일 내용
+   namoosori:
+     value: dev-test-valeu(MYINNO)
+ */
+	
+	
 	@GetMapping("/testName")
 	public String testName() {
-		return configStrName;
+		return configStrName;  //configtest-dev의 값이 오는지 혹인
 	}
 
 

@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.config.server.EnableConfigServer;
 
 @SpringBootApplication
-@EnableConfigServer
+@EnableConfigServer  //이 부분은 Config을 위하여 추가한 부분
 public class ConfigServerApplication {
 
 	public static void main(String[] args) {
