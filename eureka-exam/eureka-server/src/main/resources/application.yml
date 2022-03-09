@@ -1,0 +1,12 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: eureka-server
+    
+
+eureka:
+  client:
+    register-with-eureka: false  #이 프로젝트는 Eureka Server에 등록하지 말자
+    fetch-registry: false    
