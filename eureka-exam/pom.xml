@@ -8,7 +8,7 @@
 
     <modules>
         <module>eureka-server</module>
-        <module>auction-user</module>
+        <module>eureka-auction-user</module>
     </modules>
 
 </project>
